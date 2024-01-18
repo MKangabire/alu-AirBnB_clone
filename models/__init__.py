@@ -1,8 +1,7 @@
-#!/usr/bin/python3
-"""
-if it’s a new instance (not from a dictionary representation),
-add a call to the method new(self) on storage
-"""
+#!/usr/bin/env python3
+
+
+from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 
 storage = FileStorage()

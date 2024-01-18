@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-from models.base_model import BaseModel
+"""Class City that inherits from the BaseModel class"""
+
+from models import BaseModel
 
 
 class City(BaseModel):
-    '''City class
+    """City class"""
 
-    Attributes:
-        state_id: string - empty string: it will be the State.id
-        name: string - empty string
-    '''
     state_id = ""
     name = ""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)

@@ -1,11 +1,13 @@
-#!/usr/bin
-from models.base_model import BaseModel
+#!/usr/bin/python3
+"""Class Amenity that inherits from the BaseModel class"""
+
+from models import BaseModel
 
 
 class Amenity(BaseModel):
-    '''Amenity class
+    """Amenity class"""
 
-    Attributes:
-        name: string - empty string
-    '''
     name = ""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
