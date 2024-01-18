@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 '''
-Author: Shobi Ola-Adisa
-File:  console.py
-Date: 2024-01-12
-Description: console for AirBnB clone
 '''
 import cmd
 from models.base_model import BaseModel

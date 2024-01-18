@@ -25,6 +25,13 @@ class FileStorage:
         with open(self.__file_path, "w+", encoding='utf-8') as out_file:
             json.dump(temp, out_file)
 
+    def delete(self, obj):
+        '''Delete obj from __objects if it exists.'''
+        key = "{}.{}".format(obj.__class__.__name__, obj.id)
+        if key in self.__objects:
+            del self.__objects[key]
+            self.save()
+
     def reload(self):
         """ deserializes json to file """
         from models.base_model import BaseModel
